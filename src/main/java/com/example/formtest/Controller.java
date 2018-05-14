@@ -1,7 +1,7 @@
 package com.example.formtest;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Description:
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author tangzhongwei tangzw@zjbdos.com
  * @date 2018/05/14
  */
-@RestController
+@org.springframework.stereotype.Controller
 public class Controller {
 
     @RequestMapping("/index")
@@ -17,8 +17,10 @@ public class Controller {
         return "index";
     }
 
-    @RequestMapping("/*")
+    @RequestMapping("/test")
+    @ResponseBody
     public TestEntity test(TestEntity model) {
+        System.out.println(model);
         return model;
     }
 

@@ -1,6 +1,8 @@
 package com.example.formtest;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Description:
@@ -9,40 +11,40 @@ import java.io.Serializable;
  * @date 2018/05/14
  */
 public class TestEntity implements Serializable {
-    private String name;
-    private Integer age;
-    private String address;
+    private String string;
+    private List<String> list;
+    private String[] array;
 
-    public String getName() {
-        return name;
+    public String getString() {
+        return string;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setString(String string) {
+        this.string = string;
     }
 
-    public Integer getAge() {
-        return age;
+    public List<String> getList() {
+        return list;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setList(List<String> list) {
+        this.list = list;
     }
 
-    public String getAddress() {
-        return address;
+    public String[] getArray() {
+        return array;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setArray(String[] array) {
+        this.array = array;
     }
 
     @Override
     public String toString() {
         return "TestEntity{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", address='" + address + '\'' +
+                "string='" + string + '\'' +
+                ", list=" + list +
+                ", array=" + Arrays.toString(array) +
                 '}';
     }
 }
